@@ -1,13 +1,13 @@
 # python
 
-출력
+## 출력
 ```
 print("Hello")
 
 ```
 
 
-## 변수선언
+### 변수선언
 
 ```
 Integer
@@ -55,8 +55,28 @@ defghijkl
 
 
 ```
+## 입력
+
+input 함수의 사용
+```
+ex)
+span=input("나이가 몇살입니까?")//정수 혹은 실수로 입력하더라도 input으로 받는 값은 문자열로 인식함
+spans=100-int(span) 
+*/
+a:데이터로 변환하고자 하는 값
+그래서 데이터 값으로 변환하기 위해선 정수는 int(a) 실수는, str(a) , float(a)
+
+/* 
 
 
-formatting
-"I eat %d oranges." %3
+
+print(spans)
+
+결과
+나이가 몇살입니까? 35
+65
+
+```
+
+
 
