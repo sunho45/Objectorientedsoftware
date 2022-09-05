@@ -37,11 +37,21 @@ print(a)
 3
 
 Slice String
-str tmp="abcdefghijgkl"
-print(Str_tmp[4:])
-efgh~~
-print(Str_tmp[:4])
-abcd
+Str_tmp="abcdefghijklmn"
+str1=Str_tmp[:3]
+str2=Str_tmp[3:]
+str3=Str_tmp[3:-1]
+str4=Str_tmp[3:-2]
+print(str1)
+print(str2)
+print(str3)
+print(str4)
+
+결과
+abc
+defghijklmn
+defghijklm
+defghijkl
 
 
 ```
