@@ -18,3 +18,4 @@ if __name__ =="__main__":
 
             if event.type==pygame.QUIT:
                 running=False
+https://m.blog.naver.com/samsjang/220707257591
