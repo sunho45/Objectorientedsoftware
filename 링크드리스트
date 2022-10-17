@@ -31,23 +31,56 @@ class LinkedList:
             current_node=current_node.next
     def insert(self,index,data):
         
-        if self.count==0:
-            return '추가하십시오'
+        if self.count==0 |index==self.count:
+            return print(' 삽입이 안됩니다 충분한 양을 넣고 시도해주십시오')
         else:
-            if index==0:
+            if index==0 :
                 self.head.prev=node(data)
                 self.head.prev.next=self.head
                 self.head=self.head.prev
             else:
-                current_node=self
-        
-            
+                i=0
+                current_node=self.head
+                while i<index:
+                    i+=1
+                    
+                    current_node=current_node.next
+                new_node=node(data)
+                current_node.prev.next=new_node
+                new_node.prev=current_node.prev
+                new_node.next=current_node
+                current_node.left=new_node
+
+    def delete(self,index):
+        if self.count==0 :
+            return print('삭제할게 없습니다')
+        elif self.count==index:
+            while i<index:
+                    i+=1
+                    
+                    current_node=current_node.next
+            current_node.prev.next=current_node.prev
+        else:
+            if index==0 :
+                 current_node=self.head
+                 self.head=current_node.next
+            else:
+                i=0
+                current_node=self.head
+                while i<index:
+                    i+=1
+                    
+                    current_node=current_node.next
+                current_node.prev.next=current_node.next
+                current_node.next.prev=current_node.prev
+                
             
 
 list=LinkedList()
 list.append(3)
 list.append(5)
 list.append(5)
-list.insert(0,5)
+list.delete(1)
 list.print()
         
+   
