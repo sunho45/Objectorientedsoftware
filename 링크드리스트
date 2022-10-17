@@ -54,12 +54,14 @@ class LinkedList:
     def delete(self,index):
         if self.count==0 :
             return print('삭제할게 없습니다')
-        elif self.count==index:
+        elif self.count==index+1:
+            i=0
+            current_node=self.head
             while i<index:
                     i+=1
                     
                     current_node=current_node.next
-            current_node.prev.next=current_node.prev
+            current_node.prev.next=None
         else:
             if index==0 :
                  current_node=self.head
@@ -79,8 +81,8 @@ class LinkedList:
 list=LinkedList()
 list.append(3)
 list.append(5)
-list.append(5)
-list.delete(1)
+list.append(4)
+list.delete(2)
 list.print()
         
    
