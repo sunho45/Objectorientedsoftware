@@ -1,5 +1,3 @@
-# BREAKOUT GAME: MAIN
-
 import pygame
 import time
 
@@ -108,8 +106,7 @@ if __name__ == "__main__":
                 ball.update_reverse()
                 ball.update_vel_bounce()
             elif ball.rect.y>=590:
-                ball.update_reverse()
-                ball.update_vel_bounce()
+                ball.set_pose(350, 180)
                 lives-=1
 
 
@@ -128,10 +125,9 @@ if __name__ == "__main__":
                 brick.kill()
                 score += 10
                 if len(sprite_brick) == 0:
-                    fontl = pygame.font.Font(None, 100)
-                    Victory = fontl.render("SUCCESS", 1, (0, 255, 0))
-                    screen.blit(Victory, (200, 300))
-                    game_state = 2
+
+
+                    game_state =1
 
 
 
@@ -147,6 +143,11 @@ if __name__ == "__main__":
 
         scores = font.render("score :"+ str(score), 1, WHITE)
         live= font.render("live :"+ str(lives), 1, WHITE)
+        if game_state==1:
+            fonts = pygame.font.Font(None, 100)
+            SUCCESS = fonts.render("SUCCESS", 1, (0, 0, 255))
+            screen.blit(SUCCESS, (200, 300))
+
         if lives <= 0:
             fonts = pygame.font.Font(None, 100)
             game_state = 2
